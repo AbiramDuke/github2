@@ -1,1 +1,235 @@
-one
+HCI
+
+
+Calculator////////////////////
+
+
+b7.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "7"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "7"
+}
+}
+)
+
+b8.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "8"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "8"
+}
+}
+)
+
+b9.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "9"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "9"
+}
+}
+)
+
+b4.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "4"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "4"
+}
+}
+)
+
+b5.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "5"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "5"
+}
+}
+)
+
+b6.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "6"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "6"
+}
+}
+)
+
+b1.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "1"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "1"
+}
+}
+)
+
+b2.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "2"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "2"
+}
+}
+)
+
+b3.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "3"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "3"
+}
+}
+)
+
+b0.addEventListener('click', function(){
+	if(txtDisplay.text == "0")
+	{
+		txtDisplay.text = "0"
+	}
+	else
+	{
+		txtDisplay.text = ""
+		txtDisplay.text = txtDisplay.text + "0"
+}
+}
+)
+
+pl.addEventListener('click', function(){
+	operator = "+"
+	firstnum = txtDisplay.text
+	txtDisplay.text = firstnum;
+	
+})
+
+sb.addEventListener('click', function(){
+	operator = "-"
+	firstnum = txtDisplay.text
+	txtDisplay.text = firstnum;
+	
+})
+
+mp.addEventListener('click', function(){
+	operator = "*"
+	firstnum = txtDisplay.text
+	txtDisplay.text = firstnum;
+	
+})
+
+dv.addEventListener('click', function(){
+	operator = "/"
+	firstnum = txtDisplay.text
+	txtDisplay.text = firstnum;
+	
+})
+
+equ.addEventListener('click',function(){
+	if(operator=="+"){
+		secondnum = txtDisplay.text
+		answer = int(firstnum) + int(secondnum);
+		txtDisplay.text = answer;
+	}
+	
+	if(operator=="-"){
+		secondnum = txtDisplay.text
+		answer = int(firstnum) - int(secondnum);
+		txtDisplay.text = answer;
+	}
+	
+	if(operator=="*"){
+		secondnum = txtDisplay.text
+		answer = int(firstnum) * int(secondnum);
+		txtDisplay.text = answer;
+	}
+	
+	if(operator=="/"){
+		secondnum = txtDisplay.text
+		answer = int(firstnum) / int(secondnum);
+		txtDisplay.text = answer;
+	}
+})
+
+cl.addEventListener('click',function(){
+	txtDisplay.text = "0";
+	firstnum = "0";
+	secondnum = "0";
+	answer = "0";
+})
+
+
+
+
+
+
+
+
+Analog Clock/////////////////////////////////////
+
+import flash.utils.Timer;
+
+var  now : Date;
+var ct : Timer = new Timer(1000);
+ct.addEventListener(TimerEvent.TIMER,onTick);
+ct.start();
+
+function onTick(event:TimerEvent):void{
+	now = new Date();
+	var s:uint = now.getSeconds();
+	var m:uint = now.getMinutes();
+	var h:uint = now.getHours();
+	
+	sechand.rotation = 180+(s*6);
+	minhand.rotation = 180+(m*6);
+	hourhand.rotation = 180+(h*30)+(m*0.5);
+}
+
+
+Gallery/////////////////////////////////////////////
+
+
+btn1.addEventListener(MouseEvent.CLICK,play1);
+
+function play1(event:MouseEvent):void{
+	gotoAndStop("idf");
+}
+
+
